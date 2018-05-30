@@ -1,0 +1,61 @@
+.stepper-wrapper {
+    min-width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+  max-width: 900px;
+  width: 100%;
+}
+
+.stepper-wrapper .stepper_view  {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 250px;
+    width: 100%;
+}
+.stepper-wrapper .stepper_view .stepper_step {
+  padding: 10px;
+  border: 1px solid;
+  width: 100%;
+  display: none;
+}
+.stepper-wrapper .stepper_view .stepper_step.active_step {
+  display: flex;
+}
+
+.stepper_control {
+  width: 100%;
+  border: 1px solid green;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.stepper_control .stapper_control_btn {
+  border: none;
+  padding: 7.5px 15px;
+  border-radius: 3px;
+  background-color: green;
+  color: #ffffff;
+  cursor: pointer;
+}
+.stepper_control .stapper_control_btn::disabled {
+    cursor: disabled;
+    color: grey;
+    background-color: black;
+  }
+.stepper_control .stepper_control_current-step {
+  font-size: 20px;
+}
+.stepper_result {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  border: 1px solid blue;
+}
+.stepper_result .stepper_result_item {
+  display: flex;
+  justify-content: center;
+  padding: 5px 10;
+  margin: 5px 0;
+  border: 1px solid red;
+  min-height: 50px;
+}
