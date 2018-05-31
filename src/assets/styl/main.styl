@@ -1,3 +1,5 @@
+@import './bootstrap.min.css'
+
 .stepper-wrapper {
     min-width: 400px;
     display: flex;
@@ -12,15 +14,22 @@
     min-height: 250px;
     width: 100%;
 }
-.stepper-wrapper .stepper_view .stepper_step {
+.stepper-wrapper .stepper_view .stepper_step
   padding: 10px;
   border: 1px solid;
   width: 100%;
   display: none;
-}
-.stepper-wrapper .stepper_view .stepper_step.active_step {
-  display: flex;
-}
+  .stepper_title
+    width: 100%;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: 400;
+  &.active_step
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
 
 .stepper_control {
   width: 100%;
@@ -37,10 +46,10 @@
   color: #ffffff;
   cursor: pointer;
 }
-.stepper_control .stapper_control_btn::disabled {
-    cursor: disabled;
-    color: grey;
-    background-color: black;
+.stepper_control .stapper_control_btn:disabled {
+    cursor: not-allowed;
+    color: white;
+    background-color: grey;
   }
 .stepper_control .stepper_control_current-step {
   font-size: 20px;
@@ -58,4 +67,15 @@
   margin: 5px 0;
   border: 1px solid red;
   min-height: 50px;
+  justify-content: flex-start;
+  align-items: center;
+}
+.stepper_result_title {
+  font-size: 1.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.circleCount {
+    margin-right: 10px;
 }

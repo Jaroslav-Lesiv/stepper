@@ -45,7 +45,8 @@ gulp.task("javascript", () => {
     .pipe(
       babel({
         plugins: ["transform-class-properties"],
-        "presets": ["env"]
+        "presets": ["env"],
+        ignore: ['poper.js', 'bootstrap.min.js', 'jquery.3.3.1.min.js']
       })
     )
     .pipe(gulp.dest(paths.minjs[0]));
